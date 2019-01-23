@@ -11,4 +11,4 @@ Param(
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12;
 
 # Download and run dotnet-install.ps1
-&([scriptblock]::Create((Invoke-WebRequest "https://dot.net/v1/dotnet-install.ps1" -UseBasicParsing))) -Runtime dotnet -Channel $dotnetChannel -Version $dotnetVersion -InstallDir $dotnetInstallDir -NoPath;
+&([scriptblock]::Create((Invoke-WebRequest "https://dot.net/v1/dotnet-install.ps1" -UseBasicParsing))) -Runtime aspnetcore -Channel $dotnetChannel -Version $dotnetVersion -InstallDir $dotnetInstallDir -NoPath;
